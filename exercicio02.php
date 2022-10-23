@@ -8,21 +8,25 @@
 <body>
 <div>
     <?php
-        $a = isset($_GET["ano"])?$_GET["ano"]:1900;
-        $i = date("Y") - $a;
-        echo "Você nasceu em $a e terá $i anos<br/>";
-        if($i < 16) {
-            $tipoVoto = "não vota";
-        }
-        elseif (($i >= 16 && $i < 18) || ($i>65)) {
-            $tipoVoto = "voto opcional";
-        }
-            else {
-            $tipoVoto = "voto obrigatório";
-        }
+    $d = isset($_GET["ds"])?$_GET["ds"]:0;
+    switch ($d) {
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+            echo "Levanta e vai estudar! :)";
+            break;
+        case 7:
+        case 8:
+            echo "Descanse, pequeno gafanhoto! ;)"; 
+            break;
+        default:
+            echo "Dia da semana inválido";                           
+    }
         
-        echo "Para essa idade, $tipoVoto";
     ?>
+    <br/><a href="javascript:history.go(-1)" class="botao">Voltar</a>
 </div>
 </body>
 </html>
