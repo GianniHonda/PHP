@@ -8,15 +8,14 @@
 <body>
 <div>
     <?php
-        function soma ($a, $b) {
-            $s = $a + $b;
-            echo "<P>A soma vale $s</P>";
+        function teste (&$x) {
+            $x += 2;
+            echo "<p>O valor de X é $x</p>";
         }
-        soma(3,4);
-        soma(8,2);
-        $x = 9;
-        $y = 15;
-        soma($x,$y);
+
+        $a = 3;
+        teste($a);
+        echo "<p>O valor de A é $a</p>";
     ?>
 </div>
 </body>
