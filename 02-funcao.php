@@ -8,13 +8,11 @@
 <body>
 <div>
     <?php
-        function soma ($a, $b) {
-            return $a + $b;
-        }
-        $x = 3;
-        $y = 8;
-        $r = soma($x, $y);
-        echo "A soma entre $x e $y é igual a $r";
+        include "funcoes.php";
+        echo "<h1>Testando novas funções</h1>";
+        ola();
+        mostraValor(4);
+        echo "<h2>Finalizando o programa...</h2>";
     ?>
 </div>
 </body>
